@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+source "${BASH_SOURCE%/*}/get-target-language.sh"
+
 function handle_input {
     transText="$@"
     if [[ "$transText" == '#'* ]]; then
@@ -11,6 +14,7 @@ function verbose {
     sleep 0.1
     transArgNoAnsi="-no-ansi -show-original-phonetics n"
 
+    transTarget=$(getTargetLanguage $transText)
     while [[ -n "$input" ]]; do
         # Escape input string
         # request translation from translate-shell

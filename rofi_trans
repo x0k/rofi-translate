@@ -10,13 +10,12 @@ function Configs {
     # The default translator for translate-shell
     export primary_translator="google"
     # The alternative transltor for translate-shell
-    export secondary_translator="bing"
+    export secondary_translator="yandex"
 
     export transHistory="$HOME/.rofi_trans"
     export transAudioCacheDir="$HOME/.rofi_trans_audio"
-    export transTarget="zh-TW"
-    export save_audio="save_audio"
-    export transArgs="-b -speak"
+    # export transTarget="zh-TW"
+    # export save_audio="save_audio"
     export verbose="1"
     export auto_refresh="1"
     export version=1
